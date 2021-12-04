@@ -1,0 +1,14 @@
+version: "3"
+services: 
+
+  product-db:
+    image: postgres:11
+    container_name: cross-db
+    restart: always
+    environment:
+      - POSTGRES_DB=cross-db
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=123456
+    ports:
+      - 5435:5432
+
